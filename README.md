@@ -1,55 +1,50 @@
-# 🧠 General Knowledge Quiz — Python Programming (Project 4)
+# 🔐 Random Password Generator — Python Programming (Project 3)
 
-A simple command-line quiz game built as **Project 4** of the DecodeLabs
-Python Programming Industrial Training (Batch 2026).
+A command-line tool built as **Project 3** of the DecodeLabs Python
+Programming Industrial Training (Batch 2026).
 
-This project focuses on **control flow** — using if-else logic and
-variables to direct a program based on user input.
+This project focuses on **importing built-in modules** (`random` and
+`string`) and using them to generate secure, random passwords.
 
 ## ✨ Features
 
-- Asks 3 general knowledge questions
-- Checks each answer using if-else logic
-- Cleans up user input (removes extra spaces, ignores capitalization)
-  so "Paris", " paris", and "PARIS" all count as correct
-- Keeps a running score
-- Prints the final score out of 3 at the end
+- Asks the user for a desired password length
+- Validates input (rejects text or lengths under 4)
+- Generates a random password using letters (upper + lower) and digits
+- Uses `''.join()` for efficient string building instead of repeated
+  concatenation
 
 ## 🚀 How to Run
 
 ```bash
-python3 quiz.py
+python3 password_generator.py
 ```
 
 Example run:
 
 ```
-General Knowledge Quiz
------------------------
-Q1. What is the capital of France? paris
-Correct!
-Q2. How many continents are there? 7
-Correct!
-Q3. What is the largest planet in our solar system? mars
-Wrong. The correct answer is Jupiter.
------------------------
-Your final score is 2 out of 3.
+Random Password Generator
+--------------------------
+Enter desired password length: 10
+
+Your generated password is: aT8kLq2Zx9
 ```
 
 ## 🧠 Concepts Used
 
-| Concept            | Where it's used                                      |
-|--------------------|--------------------------------------------------------|
-| Variables          | `score` keeps track of correct answers                  |
-| if-else logic      | Checking each answer against the correct one             |
-| String methods     | `.strip()` and `.lower()` to clean up user input          |
-| f-strings          | Displaying the final score                                |
+| Concept              | Where it's used                              |
+|----------------------|-----------------------------------------------|
+| Module imports       | `import random`, `import string`               |
+| `string` constants   | `string.ascii_letters`, `string.digits`         |
+| `random.choice()`    | Picking a random character from the pool        |
+| `''.join()`          | Building the final password string efficiently  |
+| Input validation     | `try/except` for non-numeric input              |
 
 ## 📂 Project Structure
 
 ```
-quiz-python/
-├── quiz.py
+password-generator-python/
+├── password_generator.py
 ├── README.md
 └── .gitignore
 ```
